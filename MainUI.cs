@@ -14,12 +14,29 @@ namespace GamerUI
     {
         public MainUI()
         {
-            InitializeComponent(); // create the main form
-            MainUI.form = this;
-            panel1.MouseDown += GUI_MouseDown; // connect topbar drags
-            panel1.MouseMove += GUI_MouseMove;
-            panel1.MouseUp += GUI_MouseUp;
+            if (Properties.Settings.Default.SynapseDirectory != "" && File.Exists(Path.Combine(Properties.Settings.Default.SynapseDirectory,"Synapse X.exe")))
+            {
+
+            } else
+            {
+                using (FolderBrowserDialog dlg = new FolderBrowserDialog())
+                {
+                    dlg.Description = "Select your Synapse X directory.";
+                    if (dlg.ShowDialog() == DialogResult.OK)
+                    {
+                        Properties.Settings.Default.SynapseDirectory = dlg.SelectedPath;
+                        Properties.Settings.Default.Save();
+                    }
+                }
+            }
+            InitializeComponent(); // initialize the main form
+            SynXLib.SetStatus = (Action<string>)Delegate.Combine(SynXLib.SetStatus, new Action<string>(SetStatus));
+            form = this;
+            panel1.MouseDown += GUI_MouseDown; //
+            panel1.MouseMove += GUI_MouseMove; // connect topbar drags
+            panel1.MouseUp += GUI_MouseUp; //
             Editor.InitializeChromium(); // initialize the editor
+            SynXLib.Initialize(this); // initialize synapse
             WebSocket.StartSocket(); // start websocket service
         }
 
@@ -100,7 +117,7 @@ namespace GamerUI
 
         private void ExecuteFile_Click(object sender, EventArgs e)
         {
-            if (SynX.attached)
+            if (SynXLib.attached)
             {
                 this.ActiveControl = null;
                 using (OpenFileDialog openFileDialog = new OpenFileDialog())

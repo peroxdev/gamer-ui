@@ -12,6 +12,7 @@ namespace GamerUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUI));
             this.Execute = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.StatusLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.Minimize = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Exit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Title = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -24,7 +25,6 @@ namespace GamerUI
             this.AlwaysOnTop = new Bunifu.Framework.UI.BunifuCheckbox();
             this.AlwaysOnTopLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ScriptHub = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.StatusLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,17 @@ namespace GamerUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 30);
             this.panel1.TabIndex = 1;
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.AutoSize = true;
+            this.StatusLabel.Font = new System.Drawing.Font("Yu Gothic UI Light", 8.25F);
+            this.StatusLabel.ForeColor = System.Drawing.Color.White;
+            this.StatusLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StatusLabel.Location = new System.Drawing.Point(88, 12);
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(0, 13);
+            this.StatusLabel.TabIndex = 4;
             // 
             // Minimize
             // 
@@ -373,11 +384,12 @@ namespace GamerUI
             this.AlwaysOnTopLabel.BackColor = System.Drawing.Color.Transparent;
             this.AlwaysOnTopLabel.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlwaysOnTopLabel.ForeColor = System.Drawing.Color.White;
-            this.AlwaysOnTopLabel.Location = new System.Drawing.Point(451, 362);
+            this.AlwaysOnTopLabel.Location = new System.Drawing.Point(448, 361);
             this.AlwaysOnTopLabel.Name = "AlwaysOnTopLabel";
             this.AlwaysOnTopLabel.Size = new System.Drawing.Size(75, 13);
             this.AlwaysOnTopLabel.TabIndex = 4;
             this.AlwaysOnTopLabel.Text = "Always on top";
+            this.AlwaysOnTopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ScriptHub
             // 
@@ -415,17 +427,6 @@ namespace GamerUI
             this.ScriptHub.Textcolor = System.Drawing.Color.White;
             this.ScriptHub.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // StatusLabel
-            // 
-            this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Font = new System.Drawing.Font("Yu Gothic UI Light", 8.25F);
-            this.StatusLabel.ForeColor = System.Drawing.Color.White;
-            this.StatusLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StatusLabel.Location = new System.Drawing.Point(88, 12);
-            this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(0, 13);
-            this.StatusLabel.TabIndex = 4;
-            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,10 +446,12 @@ namespace GamerUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Execute);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainUI";
-            this.Text = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.Text = "Gamer UI";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
