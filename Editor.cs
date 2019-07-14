@@ -9,7 +9,7 @@ using CefSharp.WinForms;
 
 namespace GamerUI
 {
-    class Editor
+    static class Editor
     {
         public static void InitializeChromium()
         {
@@ -181,7 +181,7 @@ namespace GamerUI
                 });
             }
         }
-        public static ChromiumWebBrowser Monaco = null;
-        public static bool EditorIsReady = false;
+        public static ChromiumWebBrowser Monaco;
+        public static bool EditorIsReady;
     }
 }

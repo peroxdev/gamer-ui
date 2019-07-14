@@ -14,10 +14,7 @@ namespace GamerUI
     {
         public MainUI()
         {
-            if (Properties.Settings.Default.SynapseDirectory != "" && File.Exists(Path.Combine(Properties.Settings.Default.SynapseDirectory,"Synapse X.exe")))
-            {
-
-            } else
+            if (Properties.Settings.Default.SynapseDirectory == "" && !File.Exists(Path.Combine(Properties.Settings.Default.SynapseDirectory,"Synapse X.exe")))
             {
                 using (FolderBrowserDialog dlg = new FolderBrowserDialog())
                 {
@@ -39,13 +36,15 @@ namespace GamerUI
             SynXLib.Initialize(this); // initialize synapse
             WebSocket.StartSocket(); // start websocket service
         }
-
-        public void Wait(int seconds)
+        public static Form form;
+        public static void Wait(int seconds)
         {
             int ms = seconds * 1000;
             DateTime start = DateTime.Now;
             while ((DateTime.Now - start).TotalMilliseconds < ms)
+            {
                 Application.DoEvents();
+            }
         }
 
         public void SetStatus(string status)
@@ -81,7 +80,6 @@ namespace GamerUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        public static Form form;
 
         private void Exit_Click(object sender, EventArgs e)
         {

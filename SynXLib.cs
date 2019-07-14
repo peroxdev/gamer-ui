@@ -43,6 +43,8 @@ namespace GamerUI
                     SetStatus("ready!");
                     isReady = true;
                     break;
+                default:
+                    break;
             }
         }
         private static void ScriptHubHandler(List<SxLibBase.SynHubEntry> hubEntries)
