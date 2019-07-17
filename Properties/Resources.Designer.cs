@@ -59,15 +59,5 @@ namespace GamerUI.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] InitScript1 {
-            get {
-                object obj = ResourceManager.GetObject("InitScript1", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

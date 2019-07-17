@@ -7,12 +7,12 @@ using WebSocketSharp;
 using WebSocketSharp.Server;
 
 /// <summary>
-/// this class aims at creating a WebSocket API that is interoperable with synapse x's native one, while adding useful features
+/// Created a WebSocket server with Synapse X Web Socket API interoperability
 /// </summary>
 
 namespace GamerUI
 {
-    internal class EditorService : WebSocketBehavior
+    internal sealed class EditorService : WebSocketBehavior
     {
         protected override void OnMessage(MessageEventArgs e)
         {
@@ -35,6 +35,6 @@ namespace GamerUI
             WSServer.AddWebSocketService<EditorService>("/editor");
             WSServer.Start();
         }
-        public static WebSocketServer WSServer = new WebSocketServer("ws://localhost:24892");
+        public static WebSocketServer WSServer = new WebSocketServer("ws://localhost:24892"); // later lmao
     }
 }

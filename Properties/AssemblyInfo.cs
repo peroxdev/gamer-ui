@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GamerUI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Gamer UI")]
+[assembly: AssemblyDescription("Synapse X Custom UI")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GamerUI")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyProduct("Gamer UI")]
+[assembly: AssemblyCopyright("made by logre#2373")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

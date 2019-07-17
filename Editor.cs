@@ -9,6 +9,9 @@ using CefSharp.WinForms;
 
 namespace GamerUI
 {
+    /// <summary>
+    /// CefSharp Monaco Editor Class.
+    /// </summary>
     static class Editor
     {
         public static void InitializeChromium()
@@ -47,6 +50,7 @@ namespace GamerUI
                     {
                         AddIntellisense(Key, "Method", "", Key);
                     }
+                    AddIntellisense("getfortnite", "Method", "fortnite time" ,"getfortnite");
                     AddIntellisense("hookfunction", "Method", "Hooks function 'old', replacing it with the function 'hook'. The old function is returned, you must use it to call the function further.", "hookfunction");
                     AddIntellisense("getgenv", "Method", "Returns the environment that will be applied to each script ran by Synapse.", "getgenv");
                     AddIntellisense("keyrelease", "Method", "Releases 'key' on the keyboard. You can access the int key values on MSDN.", "keyrelease");
