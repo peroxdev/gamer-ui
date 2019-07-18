@@ -141,4 +141,8 @@
     <EmbeddedResource Include="InitScript.lua" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>COPY "$(SolutionDir)\Monaco.html" "$(TargetDir)"
+XCOPY "$(SolutionDir)\vs" "$(TargetDir)\vs\" /S /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

@@ -21,5 +21,4 @@ I made this project so that others could learn how to make a Synapse X custom UI
 ### Dependencies
   * SXLib
   * CefSharp
-  * Monaco files (can be found in releases)
   * [Syncfusion Enterprise Studio for WinForms](https://www.syncfusion.com/products/communitylicense)
