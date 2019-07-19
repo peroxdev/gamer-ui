@@ -25,7 +25,7 @@ namespace GamerUI
             Syn.ScriptHubEvent += ScriptHubHandler;
             Syn.Load();
         }
-        private static void LoadHandler(SxLibBase.SynLoadEvents Status)
+        private static void LoadHandler(SxLibBase.SynLoadEvents Status, object Param)
         {
             switch (Status)
             {
@@ -53,7 +53,7 @@ namespace GamerUI
                     break;
             }
         }
-        private static void AttachHandler(SxLibBase.SynAttachEvents Status)
+        private static void AttachHandler(SxLibBase.SynAttachEvents Status, object Param)
         {
             switch (Status)
             {
@@ -90,14 +90,31 @@ namespace GamerUI
                 case SxLibBase.SynAttachEvents.FAILED_TO_FIND:
                     SetStatus("failed to find Roblox!", true);
                     break;
-                case SxLibBase.SynAttachEvents.NOT_RUNNING_LATEST_VER:
-                    SetStatus("not running latest version!", true);
-                    break;
                 case SxLibBase.SynAttachEvents.FAILED_TO_ATTACH:
                     SetStatus("failed to attach!", true);
                     break;
                 case SxLibBase.SynAttachEvents.NOT_INJECTED:
                     SetStatus("not injected!", true);
+                    break;
+                // autoupdate events
+                case SxLibBase.SynAttachEvents.NOT_RUNNING_LATEST_VER_UPDATING:
+                    SetStatus("updating...", false);
+                    MessageBox.Show("Gamer UI is auto updating Synapse X.", "Gamer UI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case SxLibBase.SynAttachEvents.UPDATING_DLLS:
+                    SetStatus("updating dlls...", false);
+                    break;
+                case SxLibBase.SynAttachEvents.NOT_UPDATED:
+                    SetStatus("Synapse X is not updated!", false);
+                    Thread.Sleep(3000);
+                    Environment.Exit(0);
+                    break;
+                case SxLibBase.SynAttachEvents.FAILED_TO_UPDATE:
+                    SetStatus("failed to update!", true);
+                    MessageBox.Show("Gamer UI has failed to update. Please restart the application to update manually.", "Gamer UI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case SxLibBase.SynAttachEvents.REINJECTING:
+                    SetStatus("update complete!",true);
                     break;
             }
         }
