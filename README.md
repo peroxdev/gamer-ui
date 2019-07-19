@@ -1,6 +1,5 @@
 ## Gamer UI  
 ![Gamer UI Screenshot](https://i.imgur.com/tB0IE6g.png)  
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/58f6b1f0993147f8945c1c94a4b583af)](https://www.codacy.com/app/lingress/gamer-ui?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lingress/gamer-ui&amp;utm_campaign=Badge_Grade)  
 [![forthebadge](https://forthebadge.com/images/badges/designed-in-ms-paint.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/mom-made-pizza-rolls.svg)](https://forthebadge.com)  
