@@ -19,9 +19,9 @@ I made this project so that others could learn how to make a Synapse X custom UI
   * Themes
 
 ### Dependencies
-  * [SxLib]([https://github.com/LoukaMB/SynapseX/wiki/SxLib-API](https://github.com/LoukaMB/SynapseX/wiki/SxLib-API))
-  * [CefSharp]([http://cefsharp.github.io/](http://cefsharp.github.io/))
-  * [WebSocket-Sharp]([https://github.com/sta/websocket-sharp](https://github.com/sta/websocket-sharp))
+  * [SxLib](https://github.com/LoukaMB/SynapseX/wiki/SxLib-API)
+  * [CefSharp](http://cefsharp.github.io/)
+  * [WebSocket-Sharp](https://github.com/sta/websocket-sharp)
   * [Syncfusion Enterprise Studio for WinForms](https://www.syncfusion.com/products/communitylicense)
 
 ## WebSocket API Re-Implementation 
