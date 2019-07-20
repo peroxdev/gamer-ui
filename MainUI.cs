@@ -48,12 +48,9 @@ namespace GamerUI
                 }
             }
             ScriptsList.SelectedValueChanged += ScriptsList_ValueChanged;
-            new Thread(() =>
-            {
-                Thread.CurrentThread.IsBackground = true;
-                SynXLib.Initialize(this); // initialize synapse
-            }).Start();
+
             Editor.InitializeChromium(); // initialize the editor
+            SynXLib.Initialize(this); // initialize synapse
             WebSocket.StartSocket(); // start websocket service
         }
         public static Form form;
@@ -70,7 +67,6 @@ namespace GamerUI
         {
             string path = Path.Combine(Path.Combine(Properties.Settings.Default.SynapseDirectory, "scripts"), ScriptsList.SelectedItem.ToString());
             Editor.SetText(File.ReadAllText(path));
-            ScriptsList.ClearSelected();
         }
         public void SetStatus(string status, bool erase)
         {
