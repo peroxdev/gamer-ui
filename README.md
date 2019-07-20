@@ -35,6 +35,7 @@ Gamer UI has a WebSocket API that aims to be interoperable with the native Synap
 
 ### Script Hub Service
 Gamer UI not only emulates the Synapse X WebSocket API, it expands upon it. With the Script Hub service, you can execute scripts from the Synapse X script hub. Below are response codes and examples in Node.js and C#.  
+
 **Response Codes**
   * OK - The script was successfully executed.
   * NOT_READY - SxLib is either not loaded or not attached.
