@@ -8,16 +8,13 @@
 I made this project so that others could learn how to make a Synapse X custom UI using WinForms. I've seen a lot of people who are clueless on how to do it, so this should serve as a good example. I myself am not very experienced in C#, so the code might not be the best.
 
 ### Features
-  * Monaco Editor with custom Synapse global highlighting and intellisense
-  * Synapse X WebSocket API Interoperability
-  * Script Hub
-  * Automatically add custom globals on inject
-
-### To-do
-  * Local HTTP server for relaying information across Gamer UI and Roblox
-  * Finish WebSocket API (interop. and add other services)
-  * Themes
-
+ - [x] Monaco Editor with custom Synapse global highlighting and intellisense
+ - [x] Automatically add custom globals on inject
+ - [x] Script Hub
+ - [ ] Synapse X WebSocket API Interoperability
+ - [ ] Local HTTP server for relaying information across Gamer UI and Roblox
+ - [ ] Themes
+ 
 ### Dependencies
   * [SxLib](https://github.com/LoukaMB/SynapseX/wiki/SxLib-API)
   * [CefSharp](http://cefsharp.github.io/)
