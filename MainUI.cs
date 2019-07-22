@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoUpdaterDotNET;
 
 namespace GamerUI
 {
@@ -31,6 +32,11 @@ namespace GamerUI
                     }
                 }
             }
+            new Thread(() =>
+            {
+                Thread.CurrentThread.IsBackground = true;
+                AutoUpdater.Start("https://github.com/lingress/gamer-ui/releases/latest/download/manifest.xml");
+            }).Start();
             InitializeComponent(); // initialize the main form
             SynXLib.SetStatus = (Action<string, bool>)Delegate.Combine(SynXLib.SetStatus, new Action<string, bool>(SetStatus)); // connect SetStatus() to synxlib
             form = this;

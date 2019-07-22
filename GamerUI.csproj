@@ -121,6 +121,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Autoupdater.NET.Official">
+      <Version>1.5.4</Version>
+    </PackageReference>
     <PackageReference Include="cef.redist.x64">
       <Version>73.1.13</Version>
     </PackageReference>
